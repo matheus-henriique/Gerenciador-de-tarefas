@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerencie suas tarefas</title>
+    <!-- main css -->
+    <link rel="stylesheet" href="./css/main.css">
+    <!-- font-awesome -->
+    <script src="https://kit.fontawesome.com/46caf3b900.js" crossorigin="anonymous"></script>
+    <!-- main js -->
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <div class="todo-container">
+        <header>
+            <h1>Gerencie suas tarefas</h1>
+        </header>
+        <!-- adicionar tarefas  -->
+        <form id="todo-form">
+            <p>Adicione sua tarefa:</p>
+            <div class="form-control">
+                <input type="text" id="todo-input" placeholder="O que você quer fazer?">
+                <button type="submit">
+                    <i class="fa-thin fa-plus"></i>
+                </button>
+            </div>
+        </form>
+        <!-- editar tarefas  -->
+        <form id="edit-form" class="hide">
+            <p>Edite sua tarefa:</p>
+            <div class="form-control">
+                <input type="text" id="edit-input">
+                <button type="submit">
+                    <i class="fa-solid fa-check-double"></i>
+                </button>
+            </div>
+            <button id="cancel-edit-btn">Cancelar</button>
+        </form>
+        <!-- pesquisar tarefas  -->
+        <div id="toolbar">
+            <div id="search">
+                <h4>Pequisar:</h4>
+                <form>
+                    <input type="text" id="search-input" placeholder="Buscar">
+                    <button id="erase-button">
+                        <i class="fa-solid fa-delete-left"></i>
+                    </button>
+                </form>
+            </div>
+            <!-- filtrar tarefas  -->
+            <div id="filter">
+                <h4>Filtrar:</h4>
+                <select id="filter-select">
+                    <option value="all">Todos</option>
+                    <option value="done">Feitos</option>
+                    <option value="todo">A fazer</option>
+                </select>
+            </div>
+        </div>
+        <div id="todo-list"> <!--cards de tarefas -->  </div>
+    </div>
+</body>
+</html>
